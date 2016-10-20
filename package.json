@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build:thrift:node": "docker run -v \"$PWD:/proj\" thrift thrift -r -o /proj --gen js:node /proj/thrift/hello.thrift",
+    "build:thrift:js": "docker run -v \"$PWD:/proj\" thrift thrift -r -o /proj --gen js /proj/thrift/hello.thrift",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

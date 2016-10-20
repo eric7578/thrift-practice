@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thrift client</title>
+  <script src="/node_modules/thrift/lib/js/src/thrift.js"></script>
+  <script src="/gen-js/hello_types.js"></script>
+  <script src="/gen-js/Messenger.js"></script>
+  <script>
+  (function() {
+    var transport = new Thrift.TXHRTransport("http://localhost:8080/hello");
+    var protocol = new Thrift.TJSONProtocol(transport);
+    var client = new MessengerClient(protocol);
+
+    var latLng = new LatLng();
+    latLng.lat = Math.random();
+    latLng.lng = Math.random();
+
+    var send = new Send();
+    send.username = 'ericyan';
+    send.content = 'Say hello at ' + new Date();
+    send.location = latLng;
+
+    client.send(send);
+  })()
+  </script>
+</head>
+<body>
+
+</body>
+</html>
