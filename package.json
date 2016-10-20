@@ -1,0 +1,23 @@
+{
+  "name": "thrift-practice",
+  "version": "1.0.0",
+  "description": "simple practice for the communication",
+  "main": "index.js",
+  "scripts": {
+    "build:thrift:node": "docker run -v \"$PWD:/proj\" thrift thrift -r -o /proj --gen js:node /proj/thrift/hello.thrift",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric7578/thrift-practice.git"
+  },
+  "keywords": [
+    "thrift"
+  ],
+  "author": "ericyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eric7578/thrift-practice/issues"
+  },
+  "homepage": "https://github.com/eric7578/thrift-practice#readme"
+}
