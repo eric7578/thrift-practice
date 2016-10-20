@@ -1,6 +1,6 @@
 var thrift = require('thrift');
-var Messenger = require('./gen-nodejs/Messenger.js');
-var ttypes = require('./gen-nodejs/hello_types.js');
+var Messenger = require('../gen-nodejs/Messenger.js');
+var ttypes = require('../gen-nodejs/hello_types.js');
 
 var connection = thrift.createConnection('localhost', 8080, {
   transport : thrift.TBufferedTransport,
