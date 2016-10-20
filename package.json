@@ -2,7 +2,7 @@
   "name": "thrift-practice",
   "version": "1.0.0",
   "description": "simple practice for the communication",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build:thrift:node": "docker run -v \"$PWD:/proj\" thrift thrift -r -o /proj --gen js:node /proj/thrift/hello.thrift",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/eric7578/thrift-practice/issues"
   },
-  "homepage": "https://github.com/eric7578/thrift-practice#readme"
+  "homepage": "https://github.com/eric7578/thrift-practice#readme",
+  "dependencies": {
+    "thrift": "^0.9.3"
+  }
 }

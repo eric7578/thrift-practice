@@ -1,6 +1,5 @@
 struct Send {
   1: required string username;
-  2: required i32 sendtime;
   3: required string content;
   4: LatLng location;
 }
